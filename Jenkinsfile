@@ -15,7 +15,7 @@ stages{
         }
         post {
         success {
-            archiveArtifacts artifacts: '**/Targets/*.war'
+            archiveArtifacts artifacts: '**/target/*.war'
                  }
              } 
     }
