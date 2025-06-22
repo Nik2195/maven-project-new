@@ -3,7 +3,7 @@ pipeline
 agent {
   label 'dev'
 }
-parameter{
+parameters{
     string defaultValue: 'richard', name: 'LASTNAME' 
 }
 environment{
