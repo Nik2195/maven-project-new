@@ -64,7 +64,7 @@ stages{
         }
     }
     
-    stage(deplo_prod)
+    stage('deplo_prod')
     {
         when {expression {params.select_environment == 'prod'}
         beforeAgent true}
