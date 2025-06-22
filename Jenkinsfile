@@ -49,7 +49,7 @@ stages{
     }
     stage('deploy')
     {
-        when {expression {params.select_environment == 'dev'}
+        when {expression {params.select_env == 'dev'}
         beforeAgent true}
         agent { label 'dev' }
         steps{
