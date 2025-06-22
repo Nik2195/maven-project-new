@@ -33,13 +33,13 @@ stages{
                 steps{
                     echo 'testB'
                 }
-            }    
+            } 
+        }       
         post {
         success {
             archiveArtifacts artifacts: '**/target/*.war'
                  }
              }
-        }
     }
 
     }
