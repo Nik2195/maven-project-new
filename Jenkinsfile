@@ -58,7 +58,7 @@ stages{
                 unstash "maven-build"
             }
             sh"""
-            cd /var/wwww/html
+            cd /var/www/html
             jar -xvf webapp.war
             """
         }
