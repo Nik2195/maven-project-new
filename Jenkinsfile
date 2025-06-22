@@ -34,7 +34,7 @@ stages{
                     echo 'testB'
                 }
             }    
-post {
+        post {
         success {
             archiveArtifacts artifacts: '**/target/*.war'
                  }
