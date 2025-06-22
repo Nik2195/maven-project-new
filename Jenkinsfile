@@ -64,7 +64,24 @@ stages{
         }
     }
     
-    
+    stage(deplo_prod)
+    {
+        when {expression {params.select_environment == 'prod'}
+        beforeAgent true}
+        agent { label 'prod' }
+        steps{
+                timeout(time:5, unit: 'DAYS'){
+                    input message: 'Deployment approval'
+            dir("/var/www/html")
+            {
+                unstash "maven-build"
+            }
+            sh"""
+            cd /var/wwww/html
+            jar -xvf webapp.war
+            """
+    }
+        }
     
     }
 }
