@@ -7,7 +7,7 @@ parameter{
     string defaultValue: 'richard', name: 'LASTNAME' 
 }
 environment{
-    NAME = nikhil
+    NAME = 'nikhil'
 }
 
 tools {
